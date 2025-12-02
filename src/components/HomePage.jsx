@@ -14,7 +14,7 @@ const HomePage = ({ setCurrentTab }) => {
   return (
     <div className="w-full min-h-screen bg-gradient-to-br from-neutral-50 to-neutral-100 overflow-x-hidden">
       {/* Hero Section */}
-      <div className="pt-20 pb-20 w-full px-4 sm:px-6 lg:px-8">
+      <div className="pt-20 pb-20 w-full px-4 sm:px-6 lg:px-8 border-b border-neutral-100">
         <div className="w-full">
           <div className="grid lg:grid-cols-[1.2fr_1fr] gap-8 xl:gap-16 items-center">
             {/* Left Content */}
@@ -29,15 +29,15 @@ const HomePage = ({ setCurrentTab }) => {
               
               <motion.h1 
                 {...fadeInUpDelayed(0.3)}
-                className="text-5xl lg:text-6xl font-bold text-neutral-900 leading-tight bg-clip-text text-transparent bg-gradient-to-r from-neutral-900 to-neutral-700"
+                className="text-6xl lg:text-7xl font-black text-neutral-900 leading-[1.1] tracking-tight"
               >
                 Turn Your Fashion Skills Into
-                <span className="text-neutral-900"> Real Experience</span>
+                <span className="block mt-2 bg-gradient-to-r from-neutral-900 via-neutral-700 to-neutral-500 bg-clip-text text-transparent"> Real Experience</span>
               </motion.h1>
               
               <motion.p 
                 {...fadeInUpDelayed(0.4)}
-                className="text-xl text-neutral-600 leading-relaxed max-w-2xl"
+                className="text-2xl text-neutral-600 leading-relaxed max-w-2xl"
               >
                 Bridge the gap between classroom and career. Connect with local retailers, 
                 work on real projects, and earn money while building your portfolio.
@@ -49,11 +49,11 @@ const HomePage = ({ setCurrentTab }) => {
               >
                 <button 
                   onClick={() => setCurrentTab('retailers')}
-                  className="px-8 py-4 bg-neutral-900 text-white rounded-xl font-semibold hover:bg-neutral-800 transition shadow-lg shadow-neutral-900/10"
+                  className="px-10 py-5 bg-neutral-900 text-white text-lg rounded-xl font-semibold hover:bg-neutral-800 transition shadow-lg shadow-neutral-900/10"
                 >
                   Find Retailers
                 </button>
-                <button className="px-8 py-4 bg-white/60 backdrop-blur-xl border border-neutral-200/50 text-neutral-700 rounded-xl font-semibold hover:bg-white/80 hover:border-neutral-300/50 transition shadow-sm">
+                <button className="px-10 py-5 bg-white/60 backdrop-blur-xl border border-neutral-200/50 text-neutral-700 text-lg rounded-xl font-semibold hover:bg-white/80 hover:border-neutral-300/50 transition shadow-sm">
                   Learn More
                 </button>
               </motion.div>
@@ -102,7 +102,7 @@ const HomePage = ({ setCurrentTab }) => {
                 <motion.div 
                   {...hoverLift}
                   {...fadeInUpDelayed(0.3)}
-                  className="bg-white/60 backdrop-blur-xl border border-white/30 rounded-2xl p-6 col-span-2 cursor-pointer shadow-xl shadow-neutral-900/10 hover:shadow-2xl hover:shadow-neutral-900/20 transition-all duration-300 hover:scale-[1.01] w-full"
+                  className="bg-white/80 backdrop-blur-xl border border-neutral-200/50 rounded-2xl p-6 col-span-2 cursor-pointer shadow-xl shadow-neutral-900/10 hover:shadow-2xl hover:shadow-neutral-900/20 transition-all duration-300 hover:scale-[1.01] w-full"
                 >
                   <div className="flex gap-6 items-center">
                     <div className="w-12 h-12 bg-neutral-100/80 backdrop-blur-xl rounded-xl flex items-center justify-center">
@@ -124,7 +124,7 @@ const HomePage = ({ setCurrentTab }) => {
                 <motion.div 
                   {...hoverLift}
                   {...fadeInUpDelayed(0.4)}
-                  className="bg-white/70 backdrop-blur-2xl border border-white/30 rounded-2xl p-6 cursor-pointer shadow-lg shadow-neutral-900/5 hover:shadow-xl hover:shadow-neutral-900/10 transition-all duration-300"
+                  className="bg-white/80 backdrop-blur-2xl border border-neutral-200/50 rounded-2xl p-6 cursor-pointer shadow-lg shadow-neutral-900/5 hover:shadow-xl hover:shadow-neutral-900/10 transition-all duration-300"
                 >
                   <div className="w-12 h-12 bg-white/80 backdrop-blur-xl rounded-xl flex items-center justify-center mb-4">
                     <MapPin className="w-6 h-6 text-neutral-900" />
@@ -137,7 +137,7 @@ const HomePage = ({ setCurrentTab }) => {
                 <motion.div 
                   {...hoverLift}
                   {...fadeInUpDelayed(0.5)}
-                  className="bg-white/70 backdrop-blur-2xl border border-white/30 rounded-2xl p-6 cursor-pointer shadow-lg shadow-neutral-900/5 hover:shadow-xl hover:shadow-neutral-900/10 transition-all duration-300"
+                  className="bg-white/80 backdrop-blur-2xl border border-neutral-200/50 rounded-2xl p-6 cursor-pointer shadow-lg shadow-neutral-900/5 hover:shadow-xl hover:shadow-neutral-900/10 transition-all duration-300"
                 >
                   <div className="w-12 h-12 bg-white/80 backdrop-blur-xl rounded-xl flex items-center justify-center mb-4">
                     <TrendingUp className="w-6 h-6 text-neutral-900" />
@@ -152,20 +152,20 @@ const HomePage = ({ setCurrentTab }) => {
       </div>
 
       {/* Features Section */}
-      <div className="py-28 px-4 sm:px-6 lg:px-8 bg-white/80 backdrop-blur-lg">
+      <div className="py-28 px-4 sm:px-6 lg:px-8 bg-neutral-50/50 backdrop-blur-lg border-b border-neutral-100">
         <div className="w-full">
           <motion.div 
             {...fadeInUpDelayed(0)}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-neutral-900 mb-4">How It Works</h2>
-            <p className="text-xl text-neutral-600">Three simple steps to kickstart your fashion career</p>
+            <h2 className="text-5xl lg:text-6xl font-black text-neutral-900 mb-6 tracking-tight">How It Works</h2>
+            <p className="text-2xl text-neutral-600">Three simple steps to kickstart your fashion career</p>
           </motion.div>
 
           <div className="grid md:grid-cols-3 gap-8 mt-16">
             <motion.div 
               {...fadeInUpOnView(0.1)}
-              className="h-full bg-white/70 backdrop-blur-xl rounded-2xl p-10 border border-white/30 transition-all duration-300 hover:shadow-xl hover:shadow-neutral-900/10 hover:scale-[1.02] flex flex-col"
+              className="h-full bg-white/90 backdrop-blur-xl rounded-2xl p-10 border border-neutral-200/50 transition-all duration-300 hover:shadow-xl hover:shadow-neutral-900/10 hover:scale-[1.02] flex flex-col"
             >
               <div className="w-14 h-14 bg-white/80 backdrop-blur-xl rounded-xl flex items-center justify-center mb-8 shadow-sm">
                 <Search className="w-6 h-6 text-neutral-900" />
@@ -178,7 +178,7 @@ const HomePage = ({ setCurrentTab }) => {
 
             <motion.div 
               {...fadeInUpOnView(0.1)}
-              className="h-full bg-white/70 backdrop-blur-xl rounded-2xl p-10 border border-white/30 transition-all duration-300 hover:shadow-xl hover:shadow-neutral-900/10 hover:scale-[1.02] flex flex-col"
+              className="h-full bg-white/90 backdrop-blur-xl rounded-2xl p-10 border border-neutral-200/50 transition-all duration-300 hover:shadow-xl hover:shadow-neutral-900/10 hover:scale-[1.02] flex flex-col"
             >
               <div className="w-14 h-14 bg-white/80 backdrop-blur-xl rounded-xl flex items-center justify-center mb-8 shadow-sm">
                 <Users className="w-6 h-6 text-neutral-900" />
@@ -191,7 +191,7 @@ const HomePage = ({ setCurrentTab }) => {
 
             <motion.div 
               {...fadeInUpOnView(0.1)}
-              className="h-full bg-white/70 backdrop-blur-xl rounded-2xl p-10 border border-white/30 transition-all duration-300 hover:shadow-xl hover:shadow-neutral-900/10 hover:scale-[1.02] flex flex-col"
+              className="h-full bg-white/90 backdrop-blur-xl rounded-2xl p-10 border border-neutral-200/50 transition-all duration-300 hover:shadow-xl hover:shadow-neutral-900/10 hover:scale-[1.02] flex flex-col"
             >
               <div className="w-14 h-14 bg-white/80 backdrop-blur-xl rounded-xl flex items-center justify-center mb-8 shadow-sm">
                 <Briefcase className="w-6 h-6 text-neutral-900" />
@@ -206,12 +206,12 @@ const HomePage = ({ setCurrentTab }) => {
       </div>
 
       {/* CTA Section */}
-      <div className="py-32 px-8 bg-gradient-to-br from-neutral-50 to-neutral-100">
+      <div className="py-32 px-8 bg-gradient-to-br from-neutral-50 to-neutral-50">
         <motion.div 
           {...fadeInUpOnView(0)}
           className="max-w-4xl mx-auto text-center"
         >
-          <div className="bg-white/70 backdrop-blur-xl border border-white/30 rounded-3xl p-16 shadow-2xl shadow-neutral-900/10 hover:shadow-3xl hover:shadow-neutral-900/20 transition-all duration-300 max-w-4xl mx-auto">
+          <div className="bg-white/90 backdrop-blur-xl border border-neutral-200/50 rounded-3xl p-16 shadow-2xl shadow-neutral-900/10 hover:shadow-3xl hover:shadow-neutral-900/20 transition-all duration-300 max-w-4xl mx-auto">
             <h2 className="text-4xl font-bold text-neutral-900 mb-4">Ready to Start Your Journey?</h2>
             <p className="text-xl text-neutral-600 mb-8">
               Join hundreds of fashion students already gaining real-world experience

@@ -1,15 +1,18 @@
 import React from 'react';
 import { MapPin } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { hoverScaleSmall } from '../utils/PresetMotions';
 
 const RetailerCard = ({ retailer }) => {
   return (
-    <div
-      className="group bg-white/70 backdrop-blur-2xl rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden hover:scale-[1.02] cursor-pointer border border-neutral-200/50 h-80"
+    <motion.div
+      whileHover={{ scale: 1.01, transition: { duration: 0.2 } }}
+      className="group bg-white/70 backdrop-blur-2xl rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden cursor-pointer border border-white/30 h-80"
     >
       <div className="flex h-full">
         {/* Left Side - Details */}
         <div className="flex-1 p-6 space-y-3 flex flex-col justify-start pt-6 min-w-0">
-          <h3 className="text-2xl font-bold text-neutral-900 group-hover:text-indigo-600 transition-colors truncate">
+          <h3 className="text-2xl font-bold text-neutral-900 group-hover:text-neutral-700 transition-colors truncate">
             {retailer.companyName}
           </h3>
           
@@ -19,12 +22,12 @@ const RetailerCard = ({ retailer }) => {
           </div>
 
           <div className="flex items-center gap-2">
-            <span className="px-4 py-1.5 bg-indigo-100 text-indigo-700 rounded-full text-sm font-semibold">
+            <span className="px-4 py-1.5 bg-neutral-100/80 text-neutral-700 rounded-full text-sm font-semibold backdrop-blur-xl">
               {retailer.type}
             </span>
           </div>
 
-          <div className="pt-2 border-t border-neutral-200">
+          <div className="pt-2 border-t border-neutral-200/50">
             <p className="text-sm text-neutral-700 font-medium">
               {retailer.phoneNumber}
             </p>
@@ -50,7 +53,7 @@ const RetailerCard = ({ retailer }) => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

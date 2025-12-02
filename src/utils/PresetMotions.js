@@ -63,3 +63,17 @@ export const fadeInUpOnView = (delay = 0) => ({
   viewport: { once: true },
   transition: { duration: 0.5, delay }
 });
+
+export const staggerChildren = {
+  animate: {
+    transition: {
+      staggerChildren: 0.1
+    }
+  }
+};
+
+export const fadeIn = {
+  initial: { opacity: 0 },
+  animate: { opacity: 1 },
+  transition: { duration: 0.3 }
+};
