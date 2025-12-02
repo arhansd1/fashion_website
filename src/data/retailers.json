@@ -1,0 +1,282 @@
+[
+  {
+    "id": 1,
+    "companyName": "TD Men’s Wear",
+    "location": "nagole",
+    "type": "men",
+    "phoneNumber": "9642301889",
+    "email": "",
+    "photos": "public/static/retailers/1.png",
+    "exactAddress": ""
+  },
+  {
+    "id": 2,
+    "companyName": "Kreeda Sports Ware",
+    "location": "nagole",
+    "type": "unisex",
+    "phoneNumber": "7337223111",
+    "email": "",
+    "photos": "public/static/retailers/2.png",
+    "exactAddress": ""
+  },
+  {
+    "id": 3,
+    "companyName": "Rao’s thrift fashion",
+    "location": "nagole",
+    "type": "unisex",
+    "phoneNumber": "8639857248",
+    "email": "",
+    "photos": "public/static/retailers/3.png",
+    "exactAddress": ""
+  },
+  {
+    "id": 4,
+    "companyName": "Premiums The multi Brand Store",
+    "location": "nagole",
+    "type": "men",
+    "phoneNumber": "9666531103",
+    "email": "",
+    "photos": "public/static/retailers/4.png",
+    "exactAddress": ""
+  },
+  {
+    "id": 5,
+    "companyName": "ANU's Women's world",
+    "location": "nagole",
+    "type": "women",
+    "phoneNumber": "7889410609",
+    "email": "",
+    "photos": "public/static/retailers/5.png",
+    "exactAddress": ""
+  },
+  {
+    "id": 6,
+    "companyName": "HR Designer's Studio",
+    "location": "nagole",
+    "type": "unisex",
+    "phoneNumber": "9966682512",
+    "email": "",
+    "photos": "public/static/retailers/6.png",
+    "exactAddress": ""
+  },
+  {
+    "id": 7,
+    "companyName": "Error Fashions",
+    "location": "nagole",
+    "type": "men",
+    "phoneNumber": "8686676365",
+    "email": "",
+    "photos": "public/static/retailers/7.png",
+    "exactAddress": ""
+  },
+  {
+    "id": 8,
+    "companyName": "Meenakshi Ladies Corner",
+    "location": "nagole",
+    "type": "women",
+    "phoneNumber": "9248888657",
+    "email": "",
+    "photos": "public/static/retailers/8.png",
+    "exactAddress": ""
+  },
+  {
+    "id": 9,
+    "companyName": "Sri Fashions",
+    "location": "nagole",
+    "type": "men",
+    "phoneNumber": "7947413975",
+    "email": "",
+    "photos": "public/static/retailers/9.png",
+    "exactAddress": ""
+  },
+  {
+    "id": 10,
+    "companyName": "S Fashion Designer",
+    "location": "nagole",
+    "type": "women",
+    "phoneNumber": "9177688665",
+    "email": "",
+    "photos": "public/static/retailers/10.png",
+    "exactAddress": ""
+  },
+  {
+    "id": 11,
+    "companyName": "Vastranjali Fashions",
+    "location": "nagole",
+    "type": "women",
+    "phoneNumber": "8328630927",
+    "email": "",
+    "photos": "public/static/retailers/11.png",
+    "exactAddress": ""
+  },
+  {
+    "id": 12,
+    "companyName": "GR FASHION",
+    "location": "nagole",
+    "type": "men",
+    "phoneNumber": "8125158565",
+    "email": "",
+    "photos": "public/static/retailers/12.png",
+    "exactAddress": ""
+  },
+  {
+    "id": 13,
+    "companyName": "ROMAN ISLAND",
+    "location": "uppal",
+    "type": "men",
+    "phoneNumber": "6305725767",
+    "email": "",
+    "photos": "public/static/retailers/13.png",
+    "exactAddress": ""
+  },
+  {
+    "id": 14,
+    "companyName": "SWETHA BOUTIQUE & FASHION DESIGNERS",
+    "location": "nagole",
+    "type": "women",
+    "phoneNumber": "9705660777",
+    "email": "",
+    "photos": "public/static/retailers/14.png",
+    "exactAddress": ""
+  },
+  {
+    "id": 15,
+    "companyName": "SRINIVASA COLLECTION",
+    "location": "nagole",
+    "type": "women",
+    "phoneNumber": "8790632645",
+    "email": "",
+    "photos": "public/static/retailers/15.png",
+    "exactAddress": ""
+  },
+  {
+    "id": 16,
+    "companyName": "SHAMBHAVI SAREES",
+    "location": "nagole",
+    "type": "women",
+    "phoneNumber": "9398794063",
+    "email": "",
+    "photos": "public/static/retailers/16.png",
+    "exactAddress": ""
+  },
+  {
+    "id": 17,
+    "companyName": "V & V Men's Wear",
+    "location": "nagole",
+    "type": "men",
+    "phoneNumber": "8329334012",
+    "email": "",
+    "photos": "public/static/retailers/17.png",
+    "exactAddress": ""
+  },
+  {
+    "id": 18,
+    "companyName": "S.V.S. Selections",
+    "location": "nagole",
+    "type": "women",
+    "phoneNumber": "9676164604",
+    "email": "",
+    "photos": "public/static/retailers/18.png",
+    "exactAddress": ""
+  },
+  {
+    "id": 19,
+    "companyName": "Panduranga Cloth Emporium",
+    "location": "LB Nagar",
+    "type": "women",
+    "phoneNumber": "9291428990",
+    "email": "",
+    "photos": "public/static/retailers/19.png",
+    "exactAddress": ""
+  },
+  {
+    "id": 20,
+    "companyName": "Druthi Sarees",
+    "location": "nagole",
+    "type": "women",
+    "phoneNumber": "7093319171",
+    "email": "",
+    "photos": "public/static/retailers/20.png",
+    "exactAddress": ""
+  },
+  {
+    "id": 21,
+    "companyName": "Alba Men's & Kids Club",
+    "location": "nagole",
+    "type": "men",
+    "phoneNumber": "8885381800",
+    "email": "",
+    "photos": "public/static/retailers/21.png",
+    "exactAddress": ""
+  },
+  {
+    "id": 22,
+    "companyName": "Nandini | Best Designer Boutique",
+    "location": "nagole",
+    "type": "women",
+    "phoneNumber": "9618690713",
+    "email": "",
+    "photos": "public/static/retailers/22.png",
+    "exactAddress": ""
+  },
+  {
+    "id": 23,
+    "companyName": "Eesha Wedding Sarees",
+    "location": "nagole",
+    "type": "women",
+    "phoneNumber": "9642270123",
+    "email": "",
+    "photos": "public/static/retailers/23.png",
+    "exactAddress": ""
+  },
+  {
+    "id": 24,
+    "companyName": "sahil cloths",
+    "location": "nagole",
+    "type": "unisex",
+    "phoneNumber": "8607733630",
+    "email": "",
+    "photos": "public/static/retailers/24.png",
+    "exactAddress": ""
+  },
+  {
+    "id": 25,
+    "companyName": "Sri Mudhra Sarees",
+    "location": "nagole",
+    "type": "women",
+    "phoneNumber": "9182212769",
+    "email": "",
+    "photos": "public/static/retailers/25.png",
+    "exactAddress": ""
+  },
+  {
+    "id": 26,
+    "companyName": "Avi Boutique",
+    "location": "nagole",
+    "type": "women",
+    "phoneNumber": "8099971949",
+    "email": "",
+    "photos": "public/static/retailers/26.png",
+    "exactAddress": ""
+  },
+  {
+    "id": 27,
+    "companyName": "OUTFIT MEN'S WEAR",
+    "location": "nagole",
+    "type": "men",
+    "phoneNumber": "7396558161",
+    "email": "",
+    "photos": "public/static/retailers/27.png",
+    "exactAddress": ""
+  },
+  {
+    "id": 28,
+    "companyName": "Fashion Guru Men's Wear",
+    "location": "Ramanthapur",
+    "type": "men",
+    "phoneNumber": "9519426215",
+    "email": "",
+    "photos": "public/static/retailers/28.png",
+    "exactAddress": ""
+  }
+]
