@@ -6,7 +6,7 @@
     "type": "men",
     "phoneNumber": "9642301889",
     "email": "",
-    "photos": "public/static/retailers/1.png",
+    "photos": "static/retailers/1.png",
     "exactAddress": ""
   },
   {
@@ -16,7 +16,7 @@
     "type": "unisex",
     "phoneNumber": "7337223111",
     "email": "",
-    "photos": "public/static/retailers/2.png",
+    "photos": "static/retailers/2.png",
     "exactAddress": ""
   },
   {
@@ -26,7 +26,7 @@
     "type": "unisex",
     "phoneNumber": "8639857248",
     "email": "",
-    "photos": "public/static/retailers/3.png",
+    "photos": "static/retailers/3.png",
     "exactAddress": ""
   },
   {
@@ -36,7 +36,7 @@
     "type": "men",
     "phoneNumber": "9666531103",
     "email": "",
-    "photos": "public/static/retailers/4.png",
+    "photos": "static/retailers/4.png",
     "exactAddress": ""
   },
   {
@@ -46,7 +46,7 @@
     "type": "women",
     "phoneNumber": "7889410609",
     "email": "",
-    "photos": "public/static/retailers/5.png",
+    "photos": "static/retailers/5.png",
     "exactAddress": ""
   },
   {
@@ -56,7 +56,7 @@
     "type": "unisex",
     "phoneNumber": "9966682512",
     "email": "",
-    "photos": "public/static/retailers/6.png",
+    "photos": "static/retailers/6.png",
     "exactAddress": ""
   },
   {
@@ -66,7 +66,7 @@
     "type": "men",
     "phoneNumber": "8686676365",
     "email": "",
-    "photos": "public/static/retailers/7.png",
+    "photos": "static/retailers/7.png",
     "exactAddress": ""
   },
   {
@@ -76,7 +76,7 @@
     "type": "women",
     "phoneNumber": "9248888657",
     "email": "",
-    "photos": "public/static/retailers/8.png",
+    "photos": "static/retailers/8.png",
     "exactAddress": ""
   },
   {
@@ -86,7 +86,7 @@
     "type": "men",
     "phoneNumber": "7947413975",
     "email": "",
-    "photos": "public/static/retailers/9.png",
+    "photos": "static/retailers/9.png",
     "exactAddress": ""
   },
   {
@@ -96,7 +96,7 @@
     "type": "women",
     "phoneNumber": "9177688665",
     "email": "",
-    "photos": "public/static/retailers/10.png",
+    "photos": "static/retailers/10.png",
     "exactAddress": ""
   },
   {
@@ -106,7 +106,7 @@
     "type": "women",
     "phoneNumber": "8328630927",
     "email": "",
-    "photos": "public/static/retailers/11.png",
+    "photos": "static/retailers/11.png",
     "exactAddress": ""
   },
   {
@@ -116,7 +116,7 @@
     "type": "men",
     "phoneNumber": "8125158565",
     "email": "",
-    "photos": "public/static/retailers/12.png",
+    "photos": "static/retailers/12.png",
     "exactAddress": ""
   },
   {
@@ -126,7 +126,7 @@
     "type": "men",
     "phoneNumber": "6305725767",
     "email": "",
-    "photos": "public/static/retailers/13.png",
+    "photos": "static/retailers/13.png",
     "exactAddress": ""
   },
   {
@@ -136,7 +136,7 @@
     "type": "women",
     "phoneNumber": "9705660777",
     "email": "",
-    "photos": "public/static/retailers/14.png",
+    "photos": "static/retailers/14.png",
     "exactAddress": ""
   },
   {
@@ -146,7 +146,7 @@
     "type": "women",
     "phoneNumber": "8790632645",
     "email": "",
-    "photos": "public/static/retailers/15.png",
+    "photos": "static/retailers/15.png",
     "exactAddress": ""
   },
   {
@@ -156,7 +156,7 @@
     "type": "women",
     "phoneNumber": "9398794063",
     "email": "",
-    "photos": "public/static/retailers/16.png",
+    "photos": "static/retailers/16.png",
     "exactAddress": ""
   },
   {
@@ -166,7 +166,7 @@
     "type": "men",
     "phoneNumber": "8329334012",
     "email": "",
-    "photos": "public/static/retailers/17.png",
+    "photos": "static/retailers/17.png",
     "exactAddress": ""
   },
   {
@@ -176,7 +176,7 @@
     "type": "women",
     "phoneNumber": "9676164604",
     "email": "",
-    "photos": "public/static/retailers/18.png",
+    "photos": "static/retailers/18.png",
     "exactAddress": ""
   },
   {
@@ -186,7 +186,7 @@
     "type": "women",
     "phoneNumber": "9291428990",
     "email": "",
-    "photos": "public/static/retailers/19.png",
+    "photos": "static/retailers/19.png",
     "exactAddress": ""
   },
   {
@@ -196,7 +196,7 @@
     "type": "women",
     "phoneNumber": "7093319171",
     "email": "",
-    "photos": "public/static/retailers/20.png",
+    "photos": "static/retailers/20.png",
     "exactAddress": ""
   },
   {
@@ -206,7 +206,7 @@
     "type": "men",
     "phoneNumber": "8885381800",
     "email": "",
-    "photos": "public/static/retailers/21.png",
+    "photos": "static/retailers/21.png",
     "exactAddress": ""
   },
   {
@@ -216,7 +216,7 @@
     "type": "women",
     "phoneNumber": "9618690713",
     "email": "",
-    "photos": "public/static/retailers/22.png",
+    "photos": "static/retailers/22.png",
     "exactAddress": ""
   },
   {
@@ -226,7 +226,7 @@
     "type": "women",
     "phoneNumber": "9642270123",
     "email": "",
-    "photos": "public/static/retailers/23.png",
+    "photos": "static/retailers/23.png",
     "exactAddress": ""
   },
   {
@@ -236,7 +236,7 @@
     "type": "unisex",
     "phoneNumber": "8607733630",
     "email": "",
-    "photos": "public/static/retailers/24.png",
+    "photos": "static/retailers/24.png",
     "exactAddress": ""
   },
   {
@@ -246,7 +246,7 @@
     "type": "women",
     "phoneNumber": "9182212769",
     "email": "",
-    "photos": "public/static/retailers/25.png",
+    "photos": "static/retailers/25.png",
     "exactAddress": ""
   },
   {
@@ -256,7 +256,7 @@
     "type": "women",
     "phoneNumber": "8099971949",
     "email": "",
-    "photos": "public/static/retailers/26.png",
+    "photos": "static/retailers/26.png",
     "exactAddress": ""
   },
   {
@@ -266,7 +266,7 @@
     "type": "men",
     "phoneNumber": "7396558161",
     "email": "",
-    "photos": "public/static/retailers/27.png",
+    "photos": "static/retailers/27.png",
     "exactAddress": ""
   },
   {
@@ -276,7 +276,7 @@
     "type": "men",
     "phoneNumber": "9519426215",
     "email": "",
-    "photos": "public/static/retailers/28.png",
+    "photos": "static/retailers/28.png",
     "exactAddress": ""
   }
 ]

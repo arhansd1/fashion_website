@@ -39,7 +39,7 @@ const RetailerCard = ({ retailer }) => {
           <div className="absolute inset-0 flex items-center justify-center">
             {retailer.photos ? (
               <img 
-                src={`/${retailer.photos}`} 
+                src={retailer.photos.replace('public/', '/')} 
                 alt={retailer.companyName}
                 className="w-full h-full object-cover rounded-lg"
               />

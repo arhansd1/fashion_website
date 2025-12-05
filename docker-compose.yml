@@ -1,0 +1,16 @@
+
+services:
+  fashion-website:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: fashion-website
+    ports:
+      - "4173:4173"
+    restart: unless-stopped
+    networks:
+      - fashion-network
+
+networks:
+  fashion-network:
+    driver: bridge
