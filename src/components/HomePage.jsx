@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Search, MapPin, Users, Briefcase, TrendingUp, Sparkles } from 'lucide-react';
 import { motion } from 'framer-motion';
+import retailersData from '../data/retailers.json';
 import { 
   fadeInUpDelayed, 
   fadeInScaleDelayed, 
@@ -11,8 +12,21 @@ import {
 } from '../utils/PresetMotions';
 
 const HomePage = ({ setCurrentTab }) => {
+  const [featuredRetailer, setFeaturedRetailer] = useState(null);
+
+  useEffect(() => {
+    // Get a random retailer when the component mounts
+    if (retailersData.length > 0) {
+      const randomIndex = Math.floor(Math.random() * retailersData.length);
+      setFeaturedRetailer(retailersData[randomIndex]);
+    }
+  }, []);
   return (
-    <div className="w-full min-h-screen bg-gradient-to-br from-neutral-50 to-neutral-100 overflow-x-hidden">
+    <div className="w-full min-h-screen bg-gradient-to-b from-blue-50 via-white to-purple-50 overflow-x-hidden relative">
+      {/* Gradient overlay */}
+      <div className="fixed inset-0 bg-gradient-to-b from-blue-100/50 via-purple-100/30 to-pink-100/50 pointer-events-none -z-10"></div>
+      <div className="fixed inset-0 bg-[radial-gradient(at_20%_30%,_rgba(99,102,241,0.1)_0%,_transparent_60%)] pointer-events-none -z-10"></div>
+      <div className="fixed inset-0 bg-[radial-gradient(at_80%_70%,_rgba(217,70,239,0.1)_0%,_transparent_60%)] pointer-events-none -z-10"></div>
       {/* Hero Section */}
       <div className="pt-20 pb-20 w-full px-4 sm:px-6 lg:px-8 border-b border-neutral-100">
         <div className="w-full">
@@ -99,26 +113,41 @@ const HomePage = ({ setCurrentTab }) => {
                 />
 
                 {/* Card 1 - Featured */}
-                <motion.div 
-                  {...hoverLift}
-                  {...fadeInUpDelayed(0.3)}
-                  className="bg-white/80 backdrop-blur-xl border border-neutral-200/50 rounded-2xl p-6 col-span-2 cursor-pointer shadow-xl shadow-neutral-900/10 hover:shadow-2xl hover:shadow-neutral-900/20 transition-all duration-300 hover:scale-[1.01] w-full"
-                >
-                  <div className="flex gap-6 items-center">
-                    <div className="w-12 h-12 bg-neutral-100/80 backdrop-blur-xl rounded-xl flex items-center justify-center">
-                      <Briefcase className="w-6 h-6 text-neutral-900" />
-                    </div>
-                    <div>
-                      <div className="text-sm text-neutral-500">Featured Opportunity</div>
-                      <div className="font-semibold text-neutral-900">Visual Merchandising Assistant</div>
-                    </div>
-                  </div>
-                  <div className="text-sm text-neutral-600">Fashion Boutique • Mumbai</div>
-                  <div className="mt-4 flex items-center justify-between">
-                    <span className="text-lg font-bold text-neutral-900">₹15,000/month</span>
-                    <span className="px-3 py-1 bg-neutral-100/80 backdrop-blur-xl rounded-lg text-sm text-neutral-700">Part-time</span>
-                  </div>
-                </motion.div>
+<motion.div 
+  {...hoverLift}
+  {...fadeInUpDelayed(0.3)}
+  className="bg-white/80 backdrop-blur-xl border border-neutral-200/50 rounded-2xl p-6 col-span-2 cursor-pointer shadow-xl shadow-neutral-900/10 hover:shadow-2xl hover:shadow-neutral-900/20 transition-all duration-300 hover:scale-[1.01] w-full"
+>
+  <div className="flex justify-between gap-6">
+    {/* Left side - Company info */}
+    <div className="flex-1 min-w-0">
+      <div className="flex items-center gap-3">
+        <div className="w-12 h-12 bg-neutral-100/80 backdrop-blur-xl rounded-xl flex-shrink-0 flex items-center justify-center">
+          <Briefcase className="w-6 h-6 text-neutral-900" />
+        </div>
+        <div>
+          <div className="text-sm text-neutral-500 mb-1">Featured Retailer</div>
+          <div className="font-semibold text-neutral-900 mb-1.5">{featuredRetailer?.companyName || 'Loading...'}</div>
+          <div className="inline-block px-3 py-1 bg-neutral-100/80 backdrop-blur-xl rounded-lg text-sm text-neutral-700 mt-1">
+            {featuredRetailer?.location}
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    {/* Right side - Type and description */}
+    <div className="w-1/2">
+      <div className="flex justify-end mb-2">
+        <div className="px-3 py-1 bg-neutral-100/80 backdrop-blur-xl rounded-lg text-sm text-neutral-700 inline-block">
+          {featuredRetailer?.type || 'Unisex'}
+        </div>
+      </div>
+      <p className="text-sm text-neutral-700 ">
+        {featuredRetailer?.Description || 'Loading retailer information...'}
+      </p>
+    </div>
+  </div>
+</motion.div>
 
                 {/* Card 2 */}
                 <motion.div 
@@ -152,7 +181,7 @@ const HomePage = ({ setCurrentTab }) => {
       </div>
 
       {/* Features Section */}
-      <div className="py-28 px-4 sm:px-6 lg:px-8 bg-neutral-50/50 backdrop-blur-lg border-b border-neutral-100">
+      <div className="py-28 px-4 sm:px-6 lg:px-8 bg-transparent backdrop-blur-lg border-b border-neutral-100">
         <div className="w-full">
           <motion.div 
             {...fadeInUpDelayed(0)}
@@ -165,7 +194,12 @@ const HomePage = ({ setCurrentTab }) => {
           <div className="grid md:grid-cols-3 gap-8 mt-16">
             <motion.div 
               {...fadeInUpOnView(0.1)}
-              className="h-full bg-white/90 backdrop-blur-xl rounded-2xl p-10 border border-neutral-200/50 transition-all duration-300 hover:shadow-xl hover:shadow-neutral-900/10 hover:scale-[1.02] flex flex-col"
+              whileHover={{ 
+                scale: 1.02,
+                boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)'
+              }}
+              transition={{ duration: 0.1, ease: "easeOut" }}
+              className="h-full bg-white/90 backdrop-blur-xl rounded-2xl p-10 border border-neutral-200/50 transition-all duration-100 flex flex-col hover:shadow-md hover:shadow-neutral-900/10"
             >
               <div className="w-14 h-14 bg-white/80 backdrop-blur-xl rounded-xl flex items-center justify-center mb-8 shadow-sm">
                 <Search className="w-6 h-6 text-neutral-900" />
@@ -178,7 +212,12 @@ const HomePage = ({ setCurrentTab }) => {
 
             <motion.div 
               {...fadeInUpOnView(0.1)}
-              className="h-full bg-white/90 backdrop-blur-xl rounded-2xl p-10 border border-neutral-200/50 transition-all duration-300 hover:shadow-xl hover:shadow-neutral-900/10 hover:scale-[1.02] flex flex-col"
+              whileHover={{ 
+                scale: 1.02,
+                boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)'
+              }}
+              transition={{ duration: 0.1, ease: "easeOut" }}
+              className="h-full bg-white/90 backdrop-blur-xl rounded-2xl p-10 border border-neutral-200/50 transition-all duration-100 flex flex-col hover:shadow-md hover:shadow-neutral-900/10"
             >
               <div className="w-14 h-14 bg-white/80 backdrop-blur-xl rounded-xl flex items-center justify-center mb-8 shadow-sm">
                 <Users className="w-6 h-6 text-neutral-900" />
@@ -191,7 +230,12 @@ const HomePage = ({ setCurrentTab }) => {
 
             <motion.div 
               {...fadeInUpOnView(0.1)}
-              className="h-full bg-white/90 backdrop-blur-xl rounded-2xl p-10 border border-neutral-200/50 transition-all duration-300 hover:shadow-xl hover:shadow-neutral-900/10 hover:scale-[1.02] flex flex-col"
+              whileHover={{ 
+                scale: 1.02,
+                boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)'
+              }}
+              transition={{ duration: 0.1, ease: "easeOut" }}
+              className="h-full bg-white/90 backdrop-blur-xl rounded-2xl p-10 border border-neutral-200/50 transition-all duration-100 flex flex-col hover:shadow-md hover:shadow-neutral-900/10"
             >
               <div className="w-14 h-14 bg-white/80 backdrop-blur-xl rounded-xl flex items-center justify-center mb-8 shadow-sm">
                 <Briefcase className="w-6 h-6 text-neutral-900" />
@@ -206,7 +250,7 @@ const HomePage = ({ setCurrentTab }) => {
       </div>
 
       {/* CTA Section */}
-      <div className="py-32 px-8 bg-gradient-to-br from-neutral-50 to-neutral-50">
+      <div className="py-32 px-8 bg-transparent">
         <motion.div 
           {...fadeInUpOnView(0)}
           className="max-w-4xl mx-auto text-center"

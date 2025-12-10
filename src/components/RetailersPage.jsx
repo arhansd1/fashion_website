@@ -59,14 +59,23 @@ const RetailersPage = () => {
   // For location search
   const [locationQuery, setLocationQuery] = useState("");
 
-  const locations = ["all", ...new Set(retailersData.map((r) => r.location))];
-  const types = ["all", ...new Set(retailersData.map((r) => r.type))];
+  // Process retailers data - normalize type and filter invalid entries
+  const processedRetailers = retailersData
+    .filter((r) => r.companyName && r.location && (r.phoneNumber || r.email)) // Filter out invalid entries
+    .map((r) => ({
+      ...r,
+      type: r.type && r.type.toLowerCase() !== 'none' ? r.type : 'Unisex', // Set default type to Unisex if none
+      email: r.email ? r.email.toLowerCase().split(/[,\s]+/)[0] : '', // Take first email and convert to lowercase
+    }));
+
+  const locations = ["all", ...new Set(processedRetailers.map((r) => r.location))];
+  const types = ["all", ...new Set(processedRetailers.map((r) => r.type))];
 
   const filteredLocations = locations.filter((loc) =>
     loc.toLowerCase().includes(locationQuery.toLowerCase())
   );
 
-  const filteredRetailers = retailersData.filter((retailer) => {
+  const filteredRetailers = processedRetailers.filter((retailer) => {
     const locationMatch =
       selectedLocation === "all" || retailer.location === selectedLocation;
     const typeMatch = selectedType === "all" || retailer.type === selectedType;
@@ -75,7 +84,7 @@ const RetailersPage = () => {
   });
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-neutral-50 to-neutral-100">
+    <div className="min-h-screen bg-gradient-to-b from-blue-50 via-white to-purple-50">
       {/* Active Filters Bar */}
       <AnimatePresence>
         {activeFilters.length > 0 && (
