@@ -11,6 +11,7 @@ const RetailerModal = ({ retailer, onClose }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [showMoreInfo, setShowMoreInfo] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+  const [isAnimating, setIsAnimating] = useState(false);
 
   useEffect(() => {
     const handleResize = () => setIsMobile(window.innerWidth < 768);
@@ -18,16 +19,34 @@ const RetailerModal = ({ retailer, onClose }) => {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
+  const [direction, setDirection] = useState(1); // 1 for right, -1 for left
+
   const nextImage = () => {
+    if (isAnimating) return;
+    setDirection(1);
+    setIsAnimating(true);
     setCurrentImageIndex((prev) =>
       prev === retailer.photos.length - 1 ? 0 : prev + 1
     );
+    setTimeout(() => setIsAnimating(false), 300);
   };
 
   const prevImage = () => {
+    if (isAnimating) return;
+    setDirection(-1);
+    setIsAnimating(true);
     setCurrentImageIndex((prev) =>
       prev === 0 ? retailer.photos.length - 1 : prev - 1
     );
+    setTimeout(() => setIsAnimating(false), 300);
+  };
+
+  const goToImage = (index) => {
+    if (isAnimating || index === currentImageIndex) return;
+    setDirection(index > currentImageIndex ? 1 : -1);
+    setIsAnimating(true);
+    setCurrentImageIndex(index);
+    setTimeout(() => setIsAnimating(false), 300);
   };
 
   if (!retailer) return null;
@@ -223,16 +242,31 @@ const RetailerModal = ({ retailer, onClose }) => {
               <div className="w-full h-full rounded-xl overflow-hidden relative bg-white flex items-center justify-center">
                 {retailer.photos?.length > 0 ? (
                   <>
-                    <div className="w-full h-full flex items-center justify-center">
-                      <img
-                        src={retailer.photos[currentImageIndex]}
-                        alt={retailer.companyName}
-                        className="max-w-full max-h-full object-contain"
-                        onError={(e) => {
-                          e.target.onerror = null;
-                          e.target.src = 'https://via.placeholder.com/400x400?text=Image+Not+Available';
-                        }}
-                      />
+                    <div className="w-full h-full flex items-center justify-center relative">
+                      <AnimatePresence mode="wait" custom={direction}>
+                        <motion.img
+                          key={currentImageIndex}
+                          src={retailer.photos[currentImageIndex]}
+                          alt={retailer.companyName}
+                          className="absolute max-w-full max-h-full object-contain"
+                          custom={direction}
+                          initial={{ x: direction > 0 ? '100%' : '-100%', opacity: 0.8 }}
+                          animate={{ x: 0, opacity: 1 }}
+                          exit={direction => ({
+                            x: direction > 0 ? '-100%' : '100%',
+                            opacity: 0.8,
+                            position: 'absolute'
+                          })}
+                          transition={{ 
+                            x: { type: 'spring', stiffness: 300, damping: 30 },
+                            opacity: { duration: 0.2 }
+                          }}
+                          onError={(e) => {
+                            e.target.onerror = null;
+                            e.target.src = 'https://via.placeholder.com/400x400?text=Image+Not+Available';
+                          }}
+                        />
+                      </AnimatePresence>
                     </div>
 
                     {/* Navigation Buttons */}
@@ -259,7 +293,7 @@ const RetailerModal = ({ retailer, onClose }) => {
                           {retailer.photos.map((_, idx) => (
                             <button
                               key={idx}
-                              onClick={() => setCurrentImageIndex(idx)}
+                              onClick={() => goToImage(idx)}
                               className={`h-2 rounded-full transition-all ${
                                 idx === currentImageIndex
                                   ? "w-6 bg-blue-600"
